@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjunan S - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Orbitron:wght@700&display=swap');
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(to right, #202020, #383838);
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #f5f5f5;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-family: "Orbitron", sans-serif;
+            text-transform: uppercase;
+            color: #f5f5f5;
+            margin-top: 10px;
+        }
+
+        /* Skills & Certifications - Interactive */
+        .skills-container, .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .skill-box, .certification-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .skill-box:hover, .certification-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .details {
+            display: none;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .skill-box:hover .details, .certification-box:hover .details {
+            display: block;
+        }
+
+        /* Projects */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Resume Button */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(to right, #f5f5f5, #c5c5c5);
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h1>SRIDHAR S</h1>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-box">💻 Basic Computer Knowledge <span class="details">Fundamentals of computing</span></div>
+                <div class="skill-box">🖥️ Programming <span class="details">Proficient in C, C++, Java</span></div>
+                <div class="skill-box">🐧 Linux Basics <span class="details">Command-line usage & scripting</span></div>
+                <div class="skill-box">🤖 AI Tools <span class="details">Chatbots, automation, and AI tools</span></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card"><h3>Digital Portfolio</h3><p>Completed</p></div>
+                <div class="project-card"><h3>Expense Tracker App</h3><p>Planned</p></div>
+                <div class="project-card"><h3>Stock Market Prediction</h3><p>Planned</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-box">🏆 IBM Cloud Certified <span class="details">IBM Certified Cloud Course</span></div>
+                <div class="certification-box">💻 Front-end Developer <span class="details">Web Development Course</span></div>
+                <div class="certification-box">🔐 Security Analyst <span class="details">Security Analyst Certificate Programme</span></div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="my resume.html.pdf" download class="button">📄 Download My Resume</a>
+        </div>
+
+        <div class="footer">
+            <h2>Contact</h2>
+            <p>📧 <a href="mailto:sridharsridhat2322@gmail.com">mrarjunan70@gmail.com</a></p>
+            <p>📞 9940984439</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
